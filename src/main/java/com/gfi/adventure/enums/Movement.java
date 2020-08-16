@@ -1,12 +1,19 @@
-package com.test.adventure.map.enums;
+package com.gfi.adventure.enums;
 
 import java.util.Arrays;
 
-import com.test.adventure.map.AdventurousPosition;
+import com.gfi.adventure.exception.MovementReadException;
+import com.gfi.adventure.model.AdventurousPosition;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+/**
+ * This {@link Enum} represents the movements that can be performed by the adventurous. 
+ * 
+ * @author Wilian Moraes
+ *
+ */
 @Getter
 @AllArgsConstructor
 public enum Movement {
@@ -53,16 +60,33 @@ public enum Movement {
 	 */
 	public abstract AdventurousPosition move(AdventurousPosition currentPosition);
 
+	/**
+	 * The char used on file to represent the {@link Movement} in a file
+	 */
 	private char mapInputCharacter;
 	
+	/**
+	 * Converts a char to a {@link Movement} using the mapInputCharacter.
+	 * 
+	 * Throws {@link MovementReadException} when it can't find a corresponding value.
+	 * 
+	 * @param mapInputCharacter
+	 * @return {@link Movement}
+	 */
 	//@formatter:off
 	public static Movement valueOfMapInputCharacter(char mapInputCharacter) {
-		//TODO:LOG debug
-		return Arrays.asList(Movement.values())
+		Movement result = 
+				Arrays.asList(Movement.values())
 					.stream()
 					.filter(movement -> movement.getMapInputCharacter() == mapInputCharacter)
 					.findFirst()
 					.orElse(null);
+		
+		if(result == null) {
+			throw new MovementReadException(mapInputCharacter);
+		}
+		
+		return result;
 	}
 	//@formatter:on
 }

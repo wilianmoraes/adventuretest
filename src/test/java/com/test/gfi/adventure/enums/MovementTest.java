@@ -1,11 +1,11 @@
-package com.test.adventure;
+package com.test.gfi.adventure.enums;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import com.test.adventure.map.AdventurousPosition;
-import com.test.adventure.map.enums.Movement;
+import com.gfi.adventure.enums.Movement;
+import com.gfi.adventure.model.AdventurousPosition;
 
 public class MovementTest {
 

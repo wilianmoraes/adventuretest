@@ -1,4 +1,4 @@
-package com.test.adventure;
+package com.test.gfi.adventure.reader;
 
 import static org.junit.Assert.assertEquals;
 
@@ -6,17 +6,17 @@ import java.net.URL;
 
 import org.junit.Test;
 
-import com.test.adventure.file.MapReader;
-import com.test.adventure.map.Adventure;
-import com.test.adventure.map.AdventurousPosition;
-import com.test.adventure.map.enums.Movement;
+import com.gfi.adventure.enums.Movement;
+import com.gfi.adventure.model.Adventure;
+import com.gfi.adventure.model.AdventurousPosition;
+import com.gfi.adventure.reader.AdventureReader;
 
-public class MapReaderTest {
+public class AdventureReaderTest {
 
 	@Test
 	public void firstScneario() {
 
-		Adventure adventure = MapReader.readMapFromFile(pathToResourceFile("scenario_1.txt").substring(1));
+		Adventure adventure = AdventureReader.readAdventureFromFile(pathToResourceFile("scenario_1.txt").substring(1));
 
 		AdventurousPosition initialPosition = adventure.getCurrentPosition();
 
@@ -46,7 +46,7 @@ public class MapReaderTest {
 	@Test
 	public void secondScneario() {
 
-		Adventure adventure = MapReader.readMapFromFile(pathToResourceFile("scenario_2.txt").substring(1));
+		Adventure adventure = AdventureReader.readAdventureFromFile(pathToResourceFile("scenario_2.txt").substring(1));
 
 		AdventurousPosition initialPosition = adventure.getCurrentPosition();
 

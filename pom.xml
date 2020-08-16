@@ -3,9 +3,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.test</groupId>
+	<groupId>com.gfi</groupId>
 	<artifactId>adventure</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
 	<name>adventureTest</name>
@@ -13,6 +13,8 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
 	</properties>
 
 	<dependencies>
@@ -48,10 +50,11 @@
 					</execution>
 				</executions>
 				<configuration>
+					<appendAssemblyId>false</appendAssemblyId>
 					<archive>
 						<manifest>
 							<addClasspath>true</addClasspath>
-							<mainClass>com.test.adventure.App</mainClass>
+							<mainClass>com.gfi.adventure.App</mainClass>
 						</manifest>
 					</archive>
 					<descriptorRefs>
