@@ -1,3 +1,9 @@
+**ADVENTURE**
+
+Usage: java -jar adventure-1.0.0.jar -f D:\path\to\file\file.txt
+
+Find an example file on adventure/src/main/resources/example.txt
+
 **OBJECTIVE**
 
 Design and write a Java program that runs on a 1.8+ JVM and implements the specification below.
@@ -24,27 +30,26 @@ The map is modelled using characters in a text file in UTF-8 format (see attachm
 
 Example:
 <pre>
-###    ######    ###
-###      ##      ###
-##     ##  ##     ##
-#      ##  ##      #
-##                ##
-#####          #####
-###### ##  ##  #####
- #     ######     # 
-     ########       
-    ############    
-    ############    
-     ########      #
- #     ######     ##
-###### ##  ## ######
-#####          #####
-##                ##
-#   ## #    # ##   #
-##   ##      ##   ##
-###    #    #    ###
-###    ######    ###
-
+ ###    ######    ###
+ ###      ##      ###
+ ##     ##  ##     ##
+ #      ##  ##      #
+ ##                ##
+ #####          #####
+ ###### ##  ##  #####
+  #     ######     # 
+      ########       
+     ############    
+     ############    
+      ########      #
+  #     ######     ##
+ ###### ##  ## ######
+ #####          #####
+ ##                ##
+ #   ## #    # ##   #
+ ##   ##      ##   ##
+ ###    #    #    ###
+ ###    ######    ###
 </pre>
 
 
